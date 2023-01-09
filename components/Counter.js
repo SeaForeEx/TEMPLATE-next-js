@@ -5,18 +5,12 @@ export default function Counter({ title }) {
   const [value, setValue] = useState(0);
 
   const handleClick = (buttonType) => {
-    switch (buttonType) {
-      case 'increment':
-        setValue((prevState) => prevState + 1);
-        break;
-      case 'decrement':
-        setValue((prevState) => prevState - 1);
-        break;
-      case 'reset':
-        setValue(0);
-        break;
-      default:
-        console.warn('This will never happen');
+    if (buttonType === 'increment') {
+      setValue((prevState) => prevState + 1);
+    } else if (buttonType === 'decrement') {
+      setValue((prevState) => prevState - 1);
+    } else if (buttonType === 'reset') {
+      setValue(0);
     }
   };
   return (
