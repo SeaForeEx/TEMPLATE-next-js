@@ -32,4 +32,5 @@ export default ViewDirectorBasedOnUserAuthStatus;
 ViewDirectorBasedOnUserAuthStatus.propTypes = {
   component: PropTypes.func.isRequired,
   pageProps: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  // one object with multiple props, one of many
 };
