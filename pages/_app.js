@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
           // if status is pending === loading
           // if status is logged in === view app
           // if status is logged out === sign in page
-          component={Component}
+          component={Component} // every component will mount and unmount for us
           pageProps={pageProps}
         />
       </AuthProvider>
@@ -24,3 +24,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+// _ in _app lets next.js know this is where it is rendering
